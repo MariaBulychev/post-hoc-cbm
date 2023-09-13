@@ -77,6 +77,7 @@ def derm7pt_concept_loaders(preprocess, n_samples, batch_size, num_workers, seed
         print(pos_df.shape, neg_df.shape)
         
         if (pos_df.shape[0] < 2*n_samples) or (neg_df.shape[0] < 2*n_samples):
+            print(pos_df.shape[0],neg_df.shape[0])
             print("\t Not enough samples! Sampling with replacement")
             pos_df = pos_df.sample(2*n_samples, replace=True)
             neg_df = neg_df.sample(2*n_samples, replace=True)
