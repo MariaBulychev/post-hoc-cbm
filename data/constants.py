@@ -20,4 +20,4 @@ HAM10K_DATA_DIR = "/path/to/broden/"
 
 
 # BRODEN concept bank
-BRODEN_CONCEPTS = "/path/to/broden/"
+BRODEN_CONCEPTS = "/content/gdrive/My Drive/PCBM/broden_concepts.zip"
