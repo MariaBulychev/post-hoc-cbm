@@ -126,6 +126,7 @@ def broden_concept_loaders(preprocess, n_samples, batch_size, num_workers, seed)
     concepts = [c for c in os.listdir(BRODEN_CONCEPTS) if os.path.isdir(os.path.join(BRODEN_CONCEPTS, c))]
     for concept_name in concepts:
         pos_dir = os.path.join(BRODEN_CONCEPTS, concept_name, "positives")
+        print("Positives directory:", pos_dir)  # Debug print
         pos_images = [os.path.join(pos_dir, f) for f in os.listdir(pos_dir)]
         if (len(pos_images) < 2*n_samples):
             print(f"\t Not enough positive samples for {concept_name}: {len(pos_images)}! Sampling with replacement")
